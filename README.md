@@ -17,6 +17,12 @@ TODO - How does it work?
 ```
 
 ### The Core Team
+Mammadu Diallo
+
+## TODO
+- update readme
+- setup gitactions for CICD
+- complete my_ngram
 
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
