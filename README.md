@@ -2,27 +2,37 @@
 ***
 
 ## Task
-TODO - What is the problem? And where is the challenge?
+
+Create a program to display the count of the characters in a string input
 
 ## Description
-TODO - How have you solved the problem?
+
+To solve the problem I created an integer array of 127 elements. I then initialized each element to '0'. The arra y index would match to the ascii value of character. The value at the index would match the count.
+
+I then went argument by argument and character by character to increment the count of the character in the array.
+
+Finally I printed each character and its count, if the count was greater than 0.
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+
+1. Download the repository
+2. Go to the repository folder
+3. Compile the program using `make`
+4. Run the program using `./my_ngram`
 
 ## Usage
-TODO - How does it work?
-```
-./my_project argument1 argument2
-```
+
+- `./my_project argument1 argument2`
+- `./my_project "argument1" "argument2"`
+
 
 ### The Core Team
 Mammadu Diallo
 
 ## TODO
-- update readme
+- ~~update readme~~
 - setup gitactions for CICD
-- complete my_ngram
+- ~~complete my_ngram~~
 
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
