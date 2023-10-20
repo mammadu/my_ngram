@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
     {
         if (ngram[i] > 0) // if the count is greater than 0, print the character and the count
         {
-            printf("%c: %d\n", i, ngram[i]); // print the character and the count. We convert the index to the character value
+            printf("%c:%d\n", i, ngram[i]); // print the character and the count. We convert the index to the character value
         }
     }
 }
