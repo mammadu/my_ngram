@@ -1,30 +1,22 @@
-# The compiler: gcc for C programs
-CC = gcc
+TARGET = my_ngram
+SRC_DIR = src
+SRC = $(SRC_DIR)/$(TARGET).c
+OBJ_DIR = obj
+OBJ = $(OBJ_DIR)/$(TARGET).o
+CFLAGS = -Wall -Wextra -g3 -Werror
 
-# Compiler flags:
-CFLAGS += -Wall -Wextra -g3 -Werror
+all : $(TARGET)
 
-CFLAGS_MEM = ${CFLAGS} -fsanitize=address
+$(TARGET) : $(OBJ)
+	gcc $(CFLAGS) -o $(TARGET) $(OBJ) 
 
-# headers file
-HEADER = include/my_ngram.h
-
-# All the .o files we need for our executable.
-OBJECT_FILES = obj/my_ngram.o
-
-NAME = my_ngram
-
-all: my_ngram
-
-${NAME}: ${OBJECT_FILES}
-	${CC} -o $@ $^ ${CFLAGS}
-
-# This generates all the object files. You must have a c file and a header file
-obj/%.o: src/%.c include/%.h
-	${CC} ${CFLAGS} -c $< -o $@
+$(OBJ) : $(SRC)
+	gcc $(CFLAGS) -c $(SRC) -o $(OBJ)
 
 clean:
-	$(RM) obj/* ./${NAME} core.* 
+	rm -f $(OBJ_DIR)/*.o
 
-re: clean ${NAME}
+fclean: clean
+	rm -f $(TARGET)
 
+re: fclean all
